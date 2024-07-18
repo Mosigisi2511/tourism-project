@@ -7,7 +7,7 @@ function initMap() {
     });
 
     // Load data and add markers
-    fetch('db.json')
+    fetch('./db.json')
         .then(response => response.json())
         .then(data => {
             data.attractions.forEach(attraction => {
@@ -30,7 +30,7 @@ function initMap() {
 
 // Load destinations, tours, accommodations, events, and reviews
 function loadContent() {
-    fetch('db.json')
+    fetch('./db.json')
         .then(response => response.json())
         .then(data => {
             // Load destinations
