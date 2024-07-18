@@ -55,12 +55,12 @@
     ],
     "reviews": [
         {
-            "user": "John Doe",
+            "user": "Joshua Gitau",
             "rating": 5,
             "comment": "Amazing experience at Maasai Mara!"
         },
         {
-            "user": "Jane Smith",
+            "user": "Lilian Wangari",
             "rating": 4,
             "comment": "Loved the virtual tour of Nairobi."
         }

@@ -7,7 +7,7 @@ function initMap() {
     });
 
     // Load data and add markers
-    fetch('db.json')
+    fetch('./db.json')
         .then(response => response.json())
         .then(data => {
             data.attractions.forEach(attraction => {
@@ -30,7 +30,7 @@ function initMap() {
 
 // Load destinations, tours, accommodations, events, and reviews
 function loadContent() {
-    fetch('db.json')
+    fetch('./db.json')
         .then(response => response.json())
         .then(data => {
             // Load destinations
@@ -41,14 +41,7 @@ function loadContent() {
                 destinationList.appendChild(div);
             });
 
-            // Load virtual tours
-            const toursGallery = document.getElementById('tours-gallery');
-            data.tours.forEach(tour => {
-                const img = document.createElement('img');
-                img.src = tour.image;
-                img.alt = tour.name;
-                toursGallery.appendChild(img);
-            });
+            
 
             // Load accommodations
             const accommodationList = document.getElementById('accommodation-list');
@@ -101,7 +94,7 @@ window.onload = () => {
 };
 
 function handleSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
     
     // Fetch form values
     let name = document.getElementById('name').value;
@@ -114,9 +107,6 @@ function handleSubmit(event) {
         return;
     }
 
-    // Example: You can handle the submission via fetch or send to a backend server
-    // Replace with your own logic for submitting data (e.g., sending to a server)
-    // For demonstration purposes, we'll just log the data to console
     console.log('Name:', name);
     console.log('Rating:', rating);
     console.log('Comment:', comment);
@@ -133,35 +123,5 @@ function handleClientLoad() {
     gapi.load('client:auth2', initClient);
   }
   
-  function initClient() {
-    gapi.client.init({
-      apiKey: 'YOUR_API_KEY',
-      clientId: 'YOUR_CLIENT_ID',
-      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
-      scope: 'https://www.googleapis.com/auth/calendar.readonly',
-    }).then(function() {
-      // Handle successful initialization
-      // Check if user is already signed in
-      if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
-        gapi.auth2.getAuthInstance().signIn();
-      }
-    }).catch(function(error) {
-      console.error('Error initializing Google API client:', error);
-    });
-  }
-  function listUpcomingEvents() {
-    gapi.client.calendar.events.list({
-      'calendarId': 'primary', // Use 'primary' for user's primary calendar
-      'timeMin': (new Date()).toISOString(),
-      'showDeleted': false,
-      'singleEvents': true,
-      'orderBy': 'startTime'
-    }).then(function(response) {
-      var events = response.result.items;
-      // Handle events data
-      console.log('Events:', events);
-    }).catch(function(error) {
-      console.error('Error fetching events:', error);
-    });
-  }
+  
     
