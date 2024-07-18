@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Kenya</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Google Maps API -->
+    <script src="https://console.cloud.google.com/apis/library/maps-backend.googleapis.com?supportedpurview=project" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>Discover Kenya</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">Destinations</a></li>
+                <li><a href="index3.html">Activities</a></li>
+                <li><a href="index4.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="slide">
+                <img src="https://www.kenyatourism.in/images/wildebeests-olerai-conservancy-masai-mara-kenya.jpg" alt="Masai Mara National Reserve">
+                <h2>Explore the Masai Mara</h2>
+            </div>
+            <div class="slide">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA0AMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAAECBQYDB//EAD8QAAIBAwIFAQUFBgQFBQAAAAECAwAEERIhBRMxQWFRBiJxgZEUMlKhsRVCYsHR8CMzkuEHFlOi8SRDcoLC/8QAGgEAAgMBAQAAAAAAAAAAAAAAAAEDBAUCBv/EACsRAAICAQQBBAIABwEAAAAAAAABAhEDBBITITEiMkFhBVEVM0KBobHhFP/aAAwDAQACEQMRAD8ALK0xSiilNo8VuWeeBglLRROjxTiPxRYAvLpaPFFCOly/FKxgujxS00Vy/FLl+KVgCaKbRRejxTcvxTsATR4pilGcvxTcrxRYwPl03Lozl+Kbl+KLADKVEpRhj8UxjHpRYARSmKUYY/FRMdOwAilMUowxVEx0WAEUpilGNHUDH4osYGUpilFmPxUTH4pjsEKVErRZj8VEx0BZqDFTcqrAxVHlVFYtoFy/FOIvFG8qudy8dpbSTzbRxrlj/fc0nNJWzpQbdIGKKg1OwVfU1FOXKcROjn0Vgaxs9/e3/FbZNUgBR5njdj/h4ONI7ZJx9D65oyy+0G+DQF0dVLatA2Gc4x8/1rGyfltkvHRsY/xO6Pb7NTyfFNyj6UTazxXCFjhGVtDKxxv48GiORWpizwyxUoOzKyYJ4pOMlVFdyvFNyj6VYcqlyqls42lfyvFNy/FWBhNNyaLDaAcqomLxVhyfFRMVFhtADF4qPK8VYcqo8miw2leYqiY/FWBhqJhp2Kiv5VRMVWBhpjDRYUVxiqBi8VYmLxUTF4p2BXGE4zioGLxVk0RPWoGE07EVxiqJiqwMNRMVFgaoxU3Ko0x0uXVbcWNgEIqwn/Eb7RNe8NtLWbAjlWWWIHbGc5YeMbZ716FcT21syJPNHG7/AHFZhk/AV56/Ev2rxu9xAh0j3s7EAD3R5OCDWdr9UoY6Xk0dDpnLJbXRUcEg58lxeSDPNZQhPZR2x2Pf51oLCPTcZUDU5959XoBtigfs8NqLZNZVC2DkY3OfSrOwaIqGjZc69QPcjsfhXmM8nK2j0cKSpnO6hHPfUMjI0AfDNS4Xx2S0TkyBnUvqAbsmN9+1H32hgvvoGPTH72OvX+96zbYWSVGG8fXyh23/AD+hp6XNOHqi6I82KGRVJHoNtdWl0xSCTLAkaGGCPr1+VdzDWCMkwg5kR5cinKyxtkg+uPFaf2e9p4+J8Rbh1zGI7kx8yErnEijZvgc9vNei0f5Hl9E/Jh6r8fx+qHgteVTGKjzFg9KblCtPcZ3GV5hPpS5PijzHUeV4o3D4wHk03I9aN5VLlevSjeHGAGEVAwirXkriuLRD0oUweOivMQ7CoGGrAxVHleK63HGwrzFUTDR5i8VExeKakLjK8w1BoasjF4qBi8UbxbGVxi8VAw1ZGLxUTD4p7znjZoim/SuF3PBZwPPdSrFEvVmP0HxNUPEPbKFWKcOh5mD/AJs2QpHqANz+Ved/8QOP8RmhhZbgcyWQ409FRRnYHyRvWS9bBz2Q7ZsR0clHdLpF5xDiUfGeIXN5GuYNTRw52OFz275wT86quCQmbidxdI2hXlYhc4yQAv8A+TWa9lTeXEErPO7QREAI2wDda0lgQ3ELaJXAEWdWGwGON2+WfqwrIzwanPvtmrhktsf0gniA18Rt2uJOW0IJUM2S7MGVRjxknNG2gkhQupbTnKJjfAAGP+3PzoJoRNxVrmbSyQxLHGCckHB1HPc9qtkeLlBmUtpyDn8qpZp0lH6LGOPljoEebmSFsbMoPUZxtQk9sImlm1qo041N23/3FTuGYnUDojjjYk+px6fU0VPGz2kkLIWcKNXkY/2qK6o6aOkSQtw+NoiGKKdSjtvv0+FZ24aaxv7W94emZkfSuc5UEg7+Dpq1tVnllkaFhFt7+AcHtXK4Vbm355JIxl8qVwFxjH+k1Lhk8c7TOJxUlR6Twy7h4nZx3MGcMPeU9VbuDRJTbpXkUt9xCC9vEtLue3jePDctu5UEAD1JBGeu1egewvGv2twrlzy825t8BiTlmU/dJ+Veh0+sU0k/Jj5tK4ttF5oqPLoggVGre8rbDjo8VEp4ojamIFHIHGDlDUSlEHFMcf2aORBxg5jqJjok4qJI8fWjlDiQMYqYxeKILr3I+tR1p+JaOUXEjhyqiYvFEFl/EtNqX1X60uUOIGMXimMQogsv4lrmXj/GPrT5RcR5bbze4hZCCxyB+EDt9DWU9o4jxHjMVuJXcMiqVA+4uMsR5q5uOILBcGzgH2i6ZDiPpjY7k9BQUEYh9pbp7p1M0KLI66yVjLHJGfAAHnNYunjsbnXx0a+eW5JfFh3D9U/GprC2cW9pDMZLqTb3yPuoB9Cae3mWJb+7mXCW7ugLHrjv8zjYePnz4HxDh44s0UF2C8saxrvgErt1/Ef5UuKGK9uG4XA6RRxXAeTD7uxOpgPXHuj5mk1Jz2vxS/6NNKNlpwtTLZwyyMzEknzjGFz5xg/OrHISPBB2x1zviu3AUZ7aa3dV07OBj7pyfyGKe5zG/wBmkUZJ1MUP3hWZmkpZHRdx9RSZHQixDmHJfYBW79aOaXmc5Ezq/Q42qp4hJa2q2jyTiJRlyZHwRnYfOhhxWEXPuF2znLhfdwvfz/PNcrFKaTSB5I9pssLu5Dqtty11DDau7Adf0rhPch4JYMBOYCCVXdegGPXrRnD5YpBKtvypDIRpGrBHbp170FxcJbQMxZXQZZ2KEGPG+OvfHTxXcF6kqOZNVaOVpOvE4ln5JBlVWfJ3JIJG3oRvRXspxEcHvZGaUIkjmJ3C6h07/MCsP7H60u7q5Qu32s+6CMMuCTv8v0rR6lcX8LIVAdH27+718birzjw5Wo+CunyY7fyeoNezD/3v+0VzN7KdvtLfIV5rwv2ourcyWDxc0xTlFZmxpTLHr390HFaCPiX2g6YiSxOAvQn4CtqE4y6vsypRlH4NObxx1uJPrXM3hzvPJ/qrPF7n/pPv61Em47oR8TU3GQ8poTej/qv/AKqgbxPxE/8A2qgxOdzhfJNOVPQvT4xchdm8TsM/Oom8T8A+dUnL9XP0puUO7v8AKlxhyl2b5fwL9KY8QPiqXQv4m+tMSADuTjzRxoORlz+0W9QKY8RPdqpeZjwabm01jQcrLk8R/irm3EW/F+dU5m3qBmB70+NByHmq30nBpZGicScQm96Vz0iOc6R53H0FVMlzPLrMsrOZH1uSfvNvufXqfrUZ3Mk7yYI1MTgnOMnpUKqRgl38ltybHDFSCOo6YoscQlE/NkIdmmWV2HUnOcfnQigfvDYb9cZqRGpwoye2Sa6aTEnXg9u4Lc2z2ltNBIGWe2DDOAzYAJ29Qar+Oce4d+17K2E8WJIWk5qPqx00ggdiOnwrzizKWNs5j1m6IZWcNjlZ2xt2O23feq/g1t9o4pbQPEJFMh9zOxwCcHxt9Kzv4ZCMnJuy0tY3SSNxxjlXd2skuXRF0wB8e6c7n40ISQ8UTAsZpNtJOWwDsPp1pp7lUuWB1NNaSEv295cHKjyCPTv85NbSXEJYe9owFkBx1z06EbjbHj1ojDbFI7c7OcFvFw/2jhldeXJoKjvnO2AO2PWtRq+1Exvom5nYnds7/wBapp7N57q0JK+4+mV8+8uN+vf7vz2oa4u5YfaOK2ty6xsAyMB176fyaockeVpryl/okjLYu0HlLbgzWcMeoPM65UdVyrnP5DJ8+a7TsP2uWIAEkQEmeh0nAx59/wDWguLFrvjsF9pDRoFi2yeU2+QwPQEY+lPxqXRPZyHWR9oVBk7kadht2z+lLZcot+Wux7qT+iHE7EW9pdcQCjVIwTc50KSAR52znya6wASxRSRy4coOWoGck/3irCEc7hKwINUU25H1xVVYL9l1wup025BGrbG2MUlkbg18oexKX0y74RxqeCB4uIEsEYKrMd8nsaPbiqZ2wKor0i9kaJl0Np/zAOvp8xiqS/8AtzRy8m4AkR88odWXrsa1NHrE1tyGbqtJK90DatxaMbZB8k1D9qQ/u/UYrzCLiHE52/wZmfT1C46fzrpPxe9jOmK8Dhh2TGPjV/mxlPhn+z0O545awYM8yRg+rb037btdOoToV9dYryqeWWd9c7tI/wCJutc/y+Fccv0d8P2ept7Q2AOWuY9uh1io/wDMNgc/+oj3/iFeXUqOX6Hw/Z6ivHbOQHTOhwM4Vs1FuL2+jVqx/wDLavMVJXoSD696k00pGGlkPxcmjl+g4vs9G/bVvj74A9TSfi8GATMoGPrXm5kc7a2x8ahRy/QuH7HRS3ur6ZC+vwpwNs0baqsUgVlDvvzG05C46YH5k0IpaQCGJS7FtiOrem1R0TWTtbea6mEMKamO/wAK0fD+BxW6iS4Kyzen7oB8d66cMsouF2+qQhp5AA2N9+wFGXLziIm3VWfsrHareLAoq5FXJlcnUSon4bdW4n+yyBreRMcvP3ep2B2x0+tV3DI3iyYRou9YMedtP1q4ubq6NvpmRFJfSUXOpj/D6j+n0GlmisrjXdEGbbKnc4A2+dVdRKK9pYwKT7ZMa1ckYe2RQsjKuxdTvj17kk+c1e2gUqLZ11611uqncE9s9jWTa9v+IGWSF+TbRrgqGACrt26nOAP7Nav2W4VykmuG1jnEY/e269z5/Ks7U+jHci7g9U6QdYxTFZIZ9WgAMHJGSCdv0NCXdrLFec+JiwYqrIDp17HS3gg/z9KsxMiuqMCEOxLHc43A2/veq32kDXd8UkAjsuQxjCMBmUnq312qhhluyfpFzKqj12GcGuUvOFz38MCxyOAQrDLBlz19R0xVPbzDiwjaJlWYIHMbAk5C5x09SKJ4Yklpw21DZxIraY85K4I2OPNDcOtFt+M3V8IykUtu6EYxpcqpzjtkg7eamgopz/wcTtqJaWt5ZW8EdkLqBplLawGGpDucEHrsMfOuMitcaWgYGN4myWwob0/LeuXEOB2RvDeiES89hlm+6CAN8HbfH50yyhCYEAPVgMjCj0x8v0qNKHugO5e2R3gWQtqeZGKvoLKe/Xb1H86p+OqbYiW1+/gOuR0JH9/lRLPIyylZFAQHq2jB3OB86EmlgmiMMzvIjDCkEnVt6+u/T4VPii1KyLJJNUinNtFdkyRNpmIDDTsGOPTyc/nQc5mt5XguVDsuNzkkbZ2Pzq4toPs1zIYd4zHgKx95SD+dQ9pykFxCyqBNJFh2XpgbdPWrkZ+tL9lZw9NlXb20s8XMQDTn7zdK4yqUOGGO3jNW0HF9NmMxqMDSdIxk+uPNdYbjVbSCSJHtp0wdgSncH6iut8l5Rzsj8FFSqc0RikZTpIH7yfdNc6lTsjFTGnpiRtmmA4BOcAnHXxTVfWcMU9oQ0JEiROugAJtpJyTjffG5qgByAfWuYyttHUo7UmWhePQ9vbQHmOoBdBufGOw60XwazW213Vw2DGNCnYgHufPp9aNW2hjTSg0oRhmBOSPj1xSiiORgFY02jRcYH8VX44mnbKbmmjla35kvnjkG6n/DVuoJ7fH1NWrusas7HZRk0FFZwxzvcAZkYk5P7vrilfyF7GcIdLcvbJwcep9BUsbjF2RtKT6KL9tXS3Mk0ekuQRGSCOV5AHf40LApuZWaVtcjHJLd/Uk1OztmcpNIMQsdhj7/AIFWM1qls73fJkEejVp2IR+w/Q/1qhtbbkW9yS2ll7PQJNfra8uIwwR8zQxxrb+IH6/Stc0jxxvrlXC7sD03+FeTGWTmNIHYSMcsVODU0vLmOTmLPJq9SxP61n6rSvNO7LmDULEqo9OdxOwZLZZH0ndssOu3TbtXRoXaMvcYOTgqxyOvT9aw1l7WXluMSrr9Wj91sf1rr/zQxUl0d2ySPfyp371Tejy30W1qcZvBpwqzqsaqurmK2Tjr07/+K4XMUE1tHyTKo1q/Lxv90jB9fX5V51xXj15xIgSYjVTkBM/n/fWoWvHOJ2kSxQXbhAwbBAbceTXcdBNJO+zh6yF1R6Nco8ljK8hVc4CIF+8fQbdv5Vno4mt7h1bUrHBAbt/vVRZ+1N4s4a+PPiIKkLhWGRjI+YFaK1vbe/SGSNw0AJikBPvLkZXIJ9fd+dLhnitSG8sMjtANyheQkkYPvE985OaGEMalldQsMSFx1yT0/pVldR8pdKAEZ2BO46VX38EhwmcOPeJ7AemakxyOJxrs4zTxtdM2ojbYL1K7ZHp2oa8tpeIIwEchMcjLAvUgeh+lGpboqiTIfux9K62iyLOiw4wmp2bGdxuCfzqZTS8Ee1vyZeMZiZf3ssSRuNh/5q+4JEHtIYjpwx3xjpk1UpFH+0ruDmBEDyKpbb94+tXPD9PPKLGi8tNSgdR0IHxqTM/T0R4o+qmceIPHYxXNmUiYzKGAcHv0I+n5Vnq1XtZAt0I7hFxIsYz2yKzLwMsIlBBTYZ809PK4JizKptHLNI4IPwpq6Qxc0kF1j2+85wv1qchoveDMtxaXr3spCchl91cZ93ufkPrVQ9mRDG8LCViup1QE6PFWH7UEPs3Fw+1JSVmczvg+8CW6eMaaH4XNK97pGcSIY9KjYDGOlQx3JuRO9rqJawThyIwdRH+Y34fQUW0yJjVsazNrO6e6rkFehPTJ71ecNtMj7RKzF5N8seorVxZG+jOyQrsLCvIwdmxGPur+LzXcRIAdSg59f3vjTPKsZXLAZ2Ge9NLLHBE0kzaUG5JNT0l5IHfhEZ7dH0sq5KdMY3x0HT4VneOTu8iwtlSvvFAenpnzj+96O4hxxfs2m2LLKzbNjoue/wAazxJYlmOSSSSfNU804vqJaxRf9Q1KlSqsTipEZpUqAFSpUqAFU45XibVG7KfVWxUKVJpPyNOi4teMyySIl440ZAMgG4Hkd+lae3gjuXMcT5jIBV0cMGHb61gKM4XfycPuVlTdMgun4hVfLgtXHyT481dSNWYxHzhIuVUsp264OP50M0yxXDRyuse+ndgNWeuPXqPypcf4zDLaNJbzhppwAFA6Lk7k9j2rJMxZiXJYnqxO9RYcLkrkSZcqi+g7jaMvE525RRWIIGNiMAEj5g0RBwji8JWWKJlBjZy2rOlRjJP1FV9lObWQukSOSMYYHbcb7Eelav2ZC3aRxSGCMn/KeQ+6p7Bj2/l+ljI9kSGCUpAKw8UureKOYQjVHmMNtqXAIOenSgG4dKAIbh1t8x5iMmQrsOqAnvn8x8K29+FubOB3lRVZQdMbA6cqCAcdOo+frtVRdWzT2gjuozHHHKwGn7wK9wTn06Y3Hmq+PKTzw2Z4cImfiDWegrJyOZHjcP8A4evBPncfHauSWNw0MOytzDq5ZGCAf3s+hH5VtbaYwoBGyyzIgiAkUL7gx/q3OT6A4oTiFlJwxpveB04KyEe6FJOQPAJPf1rv/wBDbo54ElbKb2g4e6R20sOkxLBllz0IYgn5gD6VVcMtWueIW8IbSWkHvfhHUn5VrZQZeTHjnsy/4qqMKqnGTgfw79e1V9nb29uQwlSRThY5FGDjHcfD9aI5JKDT8ieOLmmvBRWiK5cuM8sDA7VbXbSvbJJzpFwM4XABznrtSpVp4/ayhP3IqrO4k+0c1jraP7urfFNfcQuLtjHKw0K2ygeaelUe50zuSVoExTUqVRnTFSpUqAFSpUqAFSpUqAFSpUqAFSpUqAEwxjHelSpUALsT6DNWHD83rrY3DFrctzNA236fpSpUpeDqJsfZW7a+mvxcxxsVmYA7ghQCQvXce6Ou9QlfTZs6qoLqGO2epBPWlSrMydZn/Y0MfsBL6XkXNpKqKTzV91s46+lB8fmlnuxM0rq/2YElW+97xXBHfYAUqVT4krRHlfTOvBo1ewCNklXAL5OpgXIwflULpVsp+IW9uqhLfVLHkbh+mfpTUqb/AJjRzH2I/9k=" alt="Mount Kenya">
+                <h2>Climb Mount Kenya</h2>
+            </div>
+            <div class="slide">
+                <img src="https://www.kenyatourism.in/images/the-sands-chale-island-at-diani-beach-kenya.jpg" alt="Diani Beach">
+                <h2>Relax at Diani Beach</h2>
+            </div>
+        </section>
+        <section id="featured-destinations">
+            <h2>Featured Destinations</h2>
+            <div class="destination">
+                <img src="https://www.kenyatourism.in/images/reticulated-giraffes-in-samburu.jpg" alt="Masai Mara">
+                <h3>Masai Mara National Reserve</h3>
+                <p>Experience the incredible wildlife and the Great Migration.</p>
+            </div>
+            <div class="destination">
+                <img src="https://www.kenyatourism.in/images/lone-elephant-at-the-backdrop-of-mt-kilimanjaro-amboseli.jpg" alt="Amboseli">
+                <h3>Amboseli National Park</h3>
+                <p>See elephants with the stunning backdrop of Mount Kilimanjaro.</p>
+            </div>
+            <!-- Google Maps Section -->
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </section>
+        <section id="promotions">
+            <h2>Current Promotions</h2>
+            <p>Get 20% off on safari tours this summer!</p>
+            <!-- Google Calendar Booking Link -->
+            <a href="#" id="calendar-link">Book Your Safari on Google Calendar</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Explore Kenya</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
+
