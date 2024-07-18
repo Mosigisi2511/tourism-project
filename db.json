@@ -1,0 +1,68 @@
+{
+    "attractions": [
+        {
+            "name": "Maasai Mara",
+            "location": { "lat": -1.2921, "lng": 35.4677 },
+            "description": "A large game reserve in Narok."
+        },
+        {
+            "name": "Mount Kenya",
+            "location": { "lat": -0.1521, "lng": 37.3084 },
+            "description": "Kenya's highest mountain."
+        }
+    ],
+    "destinations": [
+        {
+            "name": "Nairobi",
+            "description": "The capital city of Kenya."
+        },
+        {
+            "name": "Mombasa",
+            "description": "A coastal city in Kenya."
+        }
+    ],
+    "tours": [
+        {
+            "name": "Giraffe Centre",
+            "image": "images/giraffe_centre.jpg"
+        },
+        {
+            "name": "Diani Beach",
+            "image": "images/diani_beach.jpg"
+        }
+    ],
+    "accommodations": [
+        {
+            "name": "Serena Hotel",
+            "description": "A luxury hotel in Nairobi."
+        },
+        {
+            "name": "Hemingways Nairobi",
+            "description": "A boutique hotel in Nairobi."
+        }
+    ],
+    "events": [
+        {
+            "name": "Nairobi Film Festival",
+            "date": "2024-08-15",
+            "description": "Annual film festival in Nairobi."
+        },
+        {
+            "name": "Lamu Cultural Festival",
+            "date": "2024-11-23",
+            "description": "Celebrates the rich culture of Lamu."
+        }
+    ],
+    "reviews": [
+        {
+            "user": "John Doe",
+            "rating": 5,
+            "comment": "Amazing experience at Maasai Mara!"
+        },
+        {
+            "user": "Jane Smith",
+            "rating": 4,
+            "comment": "Loved the virtual tour of Nairobi."
+        }
+    ]
+}
