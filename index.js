@@ -123,5 +123,37 @@ function handleClientLoad() {
     gapi.load('client:auth2', initClient);
   }
   
-  
+
+function initClient() {
+    gapi.client.init({
+      apiKey: 'YOUR_API_KEY',
+      clientId: 'YOUR_CLIENT_ID',
+      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
+      scope: 'https://www.googleapis.com/auth/calendar.readonly',
+    }).then(function() {
+      // Handle successful initialization
+      // Check if user is already signed in
+      if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+    }).catch(function(error) {
+      console.error('Error initializing Google API client:', error);
+    });
+  }
+  function listUpcomingEvents() {
+    gapi.client.calendar.events.list({
+      'calendarId': 'primary', // Use 'primary' for user's primary calendar
+      'timeMin': (new Date()).toISOString(),
+      'showDeleted': false,
+      'singleEvents': true,
+      'orderBy': 'startTime'
+    }).then(function(response) {
+      var events = response.result.items;
+      // Handle events data
+      console.log('Events:', events);
+    }).catch(function(error) {
+      console.error('Error fetching events:', error);
+    });
+  }
     
+
